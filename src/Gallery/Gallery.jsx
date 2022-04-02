@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import NavBar from "../NavBar/NavBar";
+import BiHomeAlt from 'react-icons/bi';
 
 export default function Gallery() {
   const [names, setNames] = useState([]);
   const [count, setCount] = useState(1);
 
   const url = `https://rickandmortyapi.com/api/character/?page=${count}`;
+
   //console.log(url);
 
   const nextPage = () => {
@@ -33,9 +36,8 @@ export default function Gallery() {
 
   return (
     <>
-      <div className="imgNavNar">
-        <img src="./img/imagNavBar.jpg" alt="navbar"></img>
-      </div>
+      <NavBar />
+
       <div className="container-btn">
         <button className="btn" onClick={backPage}>
           Previous
@@ -47,22 +49,24 @@ export default function Gallery() {
           Next
         </button>
       </div>
-      {names.map((item) => {
-        //console.log(item.name)
-        return (
-          <div key={item.id} className="container-card">
-            <div className="card">
-              <img src={item.image} alt={item.name}></img>
-              <p> Name: {item.name}</p>
-              <p> Species: {item.species}</p>
-              <p> Type: {item.type}</p>
-              <p> Gender: {item.gender}</p>
-              <p> Origin: {item.origin.name}</p>
-              <p> Location: {item.location.name}</p>
+      <div className="container-character" >
+        {names.map((item) => {
+          //console.log(item.name)
+          return (
+            <div key={item.id} className="container-card">
+              <div className="card">
+                <img src={item.image} alt={item.name}></img>
+                <p> Name: {item.name}</p>
+                <p> Species: {item.species}</p>
+                <p> Type: {item.type}</p>
+                <p> Gender: {item.gender}</p>
+                <p> Origin: {item.origin.name}</p>
+                <p> Location: {item.location.name}</p>
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </>
   );
 }

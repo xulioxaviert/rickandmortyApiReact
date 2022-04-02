@@ -1,8 +1,55 @@
-.imgNavNar{
+.container-character {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
-    justify-content: center;
-    height: 500px;
-    margin: 0;
+    gap: 10px;
+    justify-content: space-around;
     padding: 0;
+    margin: 50px 0;
+
+    .container-card {
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+            rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+            rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+        img {
+            width: 90%;
+            padding: 5px;
+        }
+    }
+
+
+}
+
+
+
+.btn {
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #6c757d;
+    box-shadow: 0 5px #495057;
+    margin: 5px;
+}
+
+.btn:hover {
+    box-shadow: 0 3px #495057;
+    top: 1px;
+}
+
+.btn:active {
+    box-shadow: 0 0 #495057;
+    top: 5px;
 }

@@ -1,5 +1,4 @@
 import Gallery from "./Gallery/Gallery";
-
 import "./main.scss";
 
 function App() {
