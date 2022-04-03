@@ -1,4 +1,27 @@
-.imgNavNar{
+nav {
+    background-color: #0C0C0C;
+    a {
+        text-decoration: none;
+        font-family: 'Rubik Glitch',
+        cursive;
+        font-size: 35px;
+        padding: 0 25px;
+        margin: 0 5px;
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+a:hover{
+    background-color: gray;
+
+}
+
+
+}
+
+
+.imgNavNar {
     background-color: #0C0C0C;
     display: flex;
     width: 100%;

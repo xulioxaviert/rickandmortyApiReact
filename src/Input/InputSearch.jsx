@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 export default function InputSearch() {
   const [characterName, setCharactersName] = useState("");
 
-  const handleInput = (e) => {
+  const handleChange = (e) => {
     setCharactersName(e.target.value);
   };
 
   return {
     characterName,
-    handleInput,
+    handleChange,
   };
 }

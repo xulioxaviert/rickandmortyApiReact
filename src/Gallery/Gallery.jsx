@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../NavBar/NavBar";
-import BiHomeAlt from 'react-icons/bi';
+import { BiHomeAlt } from "react-icons/bi";
+import { HiArrowRight } from "react-icons/hi";
+import { HiArrowLeft } from "react-icons/hi";
 
 export default function Gallery() {
   const [names, setNames] = useState([]);
@@ -37,19 +39,12 @@ export default function Gallery() {
   return (
     <>
       <NavBar />
-
       <div className="container-btn">
-        <button className="btn" onClick={backPage}>
-          Previous
-        </button>
-        <button className="btn" onClick={home}>
-          Home
-        </button>
-        <button className="btn" onClick={nextPage}>
-          Next
-        </button>
+        <HiArrowLeft className="btn" onClick={backPage} />
+        <BiHomeAlt className="btn" onClick={home}/>
+        <HiArrowRight className="btn" onClick={nextPage} />
       </div>
-      <div className="container-character" >
+      <div className="container-character">
         {names.map((item) => {
           //console.log(item.name)
           return (
